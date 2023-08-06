@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        form data:->
+        {{form.as_p}}
+    <button type="submit">Show Employees</button>    
+    </form>
+    <h1>Company Name:-> {{cmpny_name}}</h1>
+    <table border="1">
+     
+        <tr>
+            <td>Company Name</td>
+            <td>join date</td>
+            <td>emp name</td>
+            <td>address</td>
+            <td>designation</td>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{x.cmp_name}}</td>
+            <td>{{x.join_date}}</td>
+            <td>{{x.emp_name}}</td>
+            <td>{{x.emp_address}}</td>
+            <td>{{x.designation}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

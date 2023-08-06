@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'delete2' %}" method="post">
+        {% csrf_token %}
+{{form.as_p}}
+{{form1.as_p}}
+
+
+<button type="submit">Submit</button>
+    </form>
+    <table border="1">
+     
+        <tr>
+            <td>Company Name</td>
+            <td>join date</td>
+            <td>emp name</td>
+            <td>address</td>
+            <td>designation</td>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{x.cmp_name}}</td>
+            <td>{{x.join_date}}</td>
+            <td>{{x.emp_name}}</td>
+            <td>{{x.emp_address}}</td>
+            <td>{{x.designation}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+
+</html>

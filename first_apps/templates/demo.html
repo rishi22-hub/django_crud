@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Welcome</h1> 
+   <form action="{% url 'first_page' %}" method="get">
+   <button type="submit" >ADD Company</button></form>
+   <br><br>
+   <form action="{% url 'second_page' %}" method="get">
+    <button type="submit" >ADD Employee</button></form>
+    <br><br>
+   <form action="{% url 'show' %}" method="get">
+    <button type="submit" >Show Companies data</button></form>
+    <br><br>
+    <form action="{% url 'show2' %}" method="get">
+        <button type="submit" >Show Employees data</button></form>
+        <br><br>
+    <form action="{% url 'delete' %}" method="get">
+        <button type="submit" >Delete Company data</button></form>
+        <br><br>
+    <form action="{% url 'delete2' %}" method="get">
+        <button type="submit" >Delete Employees data</button></form>
+        <br><br>
+        <form action="{% url 'update' %}" method="get">
+            <button type="submit" >Update Company data</button></form>
+            <br><br>
+        <form action="{% url 'update2' %}" method="get">
+            <button type="submit" >Update Employees data</button></form>
+            <br><br>
+</body>
+</html>
