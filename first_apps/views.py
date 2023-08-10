@@ -160,3 +160,15 @@ def delete_data_emp(request):
         'data':Employee.objects.filter(cmp_name=company)
     }
     return render(request,'delete_emp.html',context)
+
+
+
+def delete(request,id):
+    emp=Employee.objects.get(id=id)
+    emp.delete()
+    return redirect('show2')
+
+def edit(request,id):
+    emp=Employee.objects.get(id=id)
+    print("id is",id)
+    return redirect('show2')

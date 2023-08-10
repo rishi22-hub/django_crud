@@ -10,6 +10,8 @@ urlpatterns=[
     path("show_emp",views.show_data_emp,name="show2"),
     path("update",views.update_data,name="update"),
     path("update_emp",views.update_data_emp,name="update2"),
-    path("delete",views.delete_data,name="delete"),
+    path("delete1",views.delete_data,name="delete"),
     path("delete_emp",views.delete_data_emp,name="delete2"),
+      path("delete/<int:id>/",views.delete,name="delete3"),
+      path("edit/<int:id>",views.edit,name="edit3"),
 ]

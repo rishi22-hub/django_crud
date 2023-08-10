@@ -3,7 +3,15 @@ from .models import Company,Employee
 class CompanyForm(forms.ModelForm):
     class Meta:
         model = Company
-        fields = "__all__"
+        fields = ('name','description','industry','phoneno','est_date','address')
+        widgets={
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+            'description':forms.TextInput(attrs={'class':'form-control'}),
+            'industry':forms.TextInput(attrs={'class':'form-control'}),
+            'phoneno':forms.TextInput(attrs={'class':'form-control'}),
+            'est_date':forms.TextInput(attrs={'class':'form-control'}),
+            'address':forms.TextInput(attrs={'class':'form-control'})
+        }
 
 class EmployeeForm(forms.ModelForm):
     class Meta:
